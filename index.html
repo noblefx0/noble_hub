@@ -20,6 +20,7 @@
 
     .fullContent {
       display: flex;
+      flex-wrap: wrap;
 
     }
 
@@ -47,14 +48,17 @@
       margin-left: 135px;
     }
 
+    .all {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
     button {
-      padding: 10px;
       color: black;
       background-color: rgba(255, 255, 255, 0.863);
       border-color: 20px black;
       border-radius: 20px;
-      width: 300px;
-      margin-top: 10px;
 
     }
 
@@ -62,6 +66,16 @@
       color: white;
       background-color: black;
       font-size: 15px;
+    }
+
+    @media (max-width: 800px) {
+      img {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+
+      }
     }
   </style>
 </head>
@@ -74,15 +88,14 @@
     <div class="formSide">
       <div class="happen">
         <h1>Happening now</h1>
-        <p>join today</p>
-        <button> <i class="fa-brands fa-google"> </i>Sign up with Google</button><br>
-        <button><i class="fa-brands fa-apple"></i> Sign up with Aple</button>
-        <p class="or">OR</p>
-        <button class="create">create account</button>
-        <p>By signing up, you agree to the <a href="##">Terms of Service</a> and <a href="#">Privacy Policy
-          </a>, including <a href="#">Cookies Use</a>.</p>
-
-        <div class="already">
+        <div class="all">
+          <p>join today</p>
+          <button> <i class="fa-brands fa-google"> </i> Sign up with Google</button><br>
+          <button><i class="fa-brands fa-apple"></i> Sign up with Apple</button>
+          <p class="or">OR</p>
+          <button class="create">create account</button>
+          <p>By signing up, you agree to the <a href="##">Terms of Service</a> and <a href="#">Privacy Policy
+            </a>, including <a href="#">Cookies Use</a>.</p>
           <p>Already have an account?</p>
           <button>Sign in</button><br>
           <button>Get Grok</button>
